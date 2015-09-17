@@ -137,6 +137,7 @@ public class TextCreationTool extends CreationTool implements ActionListener {
     
     @Override
     public void mouseReleased(MouseEvent evt) {
+        super.mouseReleased(evt);
     }
     
     protected void endEdit() {
