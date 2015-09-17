@@ -190,6 +190,7 @@ public class CreationTool extends AbstractTool {
     }
 
     public void mousePressed(MouseEvent evt) {
+        System.out.println("CT MP");
         super.mousePressed(evt);
         getView().clearSelection();
         createdFigure = createFigure();
@@ -212,6 +213,7 @@ public class CreationTool extends AbstractTool {
     }
 
     public void mouseReleased(MouseEvent evt) {
+        System.out.println("Released CTool");
         if (createdFigure != null) {
             Rectangle2D.Double bounds = createdFigure.getBounds();
             if (bounds.width == 0 && bounds.height == 0) {

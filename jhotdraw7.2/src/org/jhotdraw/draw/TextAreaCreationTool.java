@@ -109,6 +109,7 @@ public class TextAreaCreationTool extends CreationTool implements ActionListener
     @Override
     @FeatureEntryPoint(JHotDrawFeatures.TEXT_AREA_TOOL)
     public void mousePressed(MouseEvent e) {
+        System.out.println("TACT");
         TextHolderFigure textHolder = null;
 
         // Note: The search sequence used here, must be
@@ -146,11 +147,13 @@ public class TextAreaCreationTool extends CreationTool implements ActionListener
             return;
         }
         if (typingTarget != null) {
+            System.out.println("Target not null");
             endEdit();
             if (isToolDoneAfterCreation()) {
                 fireToolDone();
             }
         } else {
+            System.out.println("Target null");
             super.mousePressed(e);
         }
     }

@@ -65,6 +65,7 @@ public class TextCreationTool extends CreationTool implements ActionListener {
      */
     @Override
     public void mousePressed(MouseEvent e) {
+        System.out.println("TCT");
         TextHolderFigure textHolder = null;
         // Note: The search sequence used here, must be
         // consistent with the search sequence used by the
@@ -99,11 +100,13 @@ public class TextCreationTool extends CreationTool implements ActionListener {
                     return;
         }
         if (typingTarget != null) {
+            System.out.println("Target not null");
             endEdit();
             if (isToolDoneAfterCreation()) {
                 fireToolDone();
             }
         } else {
+            System.out.println("Target null");
             super.mousePressed(e);
             // update view so the created figure is drawn before the floating text
             // figure is overlaid. 
