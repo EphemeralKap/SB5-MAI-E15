@@ -93,6 +93,19 @@ public class FillToolBar extends AbstractToolBar {
                     gbc.gridwidth = 2;
                     gbc.anchor = GridBagConstraints.FIRST_LINE_START;
                     p.add(btn, gbc);
+                    
+                    //Favorite colors
+                    btn = ButtonFactory.createFavouriteColorsButton(editor,
+                            FILL_COLOR, "attribute.favouriteColor", labels, 
+                            defaultAttributes, new Rectangle(3, 3, 10, 10));
+                    btn.setUI((PaletteButtonUI) PaletteButtonUI.createUI(btn));
+                    ((JPopupButton) btn).setAction(null, null);
+                    
+                    gbc = new GridBagConstraints();
+                    gbc.gridx = 0;
+                    gbc.gridwidth = 2;
+                    gbc.anchor = GridBagConstraints.FIRST_LINE_START;
+                    p.add(btn, gbc);
 
                     // Opacity slider
                     JPopupButton opacityPopupButton = new JPopupButton();

@@ -109,6 +109,13 @@ public class JPopupButton extends javax.swing.JButton {
             updateFont(child);
         }
     }
+    
+    /**
+     * Removes all components added to the JPopupButton.
+     */
+    public void removeAllComponents() {
+        this.popupMenu.removeAll();
+    }
 
     public void add(JMenuItem item) {
         getPopupMenu().add(item);
